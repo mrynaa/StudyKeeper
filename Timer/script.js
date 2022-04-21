@@ -21,7 +21,8 @@ function resumeTimer() {
 function terminateTimer() {
     clearTimeout(timex);
     hours = 0;      mins = 0;      seconds = 0;
-    $('#hours','#mins').html('00:');
+    $('#hours').html('00 :');
+    $('#mins').html('00 :');
     $('#seconds').html('00');
     $('#controls').html("<button id=\"start\" onclick=start() class=\"btn btn-lg btn-info button-ss\"> Inizia </button>");
 };
