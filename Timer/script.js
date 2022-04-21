@@ -33,12 +33,12 @@ function startTimer(){
     if(seconds >59){seconds=0;mins++;
        if(mins>59) {
        mins=0;hours++;
-         if(hours <10) {$("#hours").text('0'+hours+':')} else $("#hours").text(hours+':');
+         if(hours <10) {$("#hours").text('0'+hours+' :')} else $("#hours").text(hours+' :');
         }
                        
     if(mins<10){                     
-      $("#mins").text('0'+mins+':');}       
-       else $("#mins").text(mins+':');
+      $("#mins").text('0'+mins+' :');}       
+       else $("#mins").text(mins+' :');
                    }    
     if(seconds <10) {
       $("#seconds").text('0'+seconds);} else {
