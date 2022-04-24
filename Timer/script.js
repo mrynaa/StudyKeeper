@@ -1,20 +1,19 @@
-var hours = 0;
 var mins = 0;
 var seconds = 0;
 var timex;
 
 function start() {
     startTimer();
-    $('#controls').html("<button id=\"stop\" onclick=stopTimer() class=\"btn btn-lg btn-info button-ss\"> Pausa </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-lg btn-info button-ss\"> Termina </button>");
+    $('#controls').html("<button id=\"stop\" onclick=stopTimer() class=\"btn btn-outline-dark button-ss\"> Pausa </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-outline-dark button-ss\"> Termina </button>");
 };
 
 function stopTimer() {
     clearTimeout(timex);
-    $('#controls').html("<button id=\"resume\" onclick=resumeTimer() class=\"btn btn-lg btn-info button-ss\"> Riprendi </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-lg btn-info button-ss\"> Termina </button>");
+    $('#controls').html("<button id=\"resume\" onclick=resumeTimer() class=\"btn btn-outline-dark button-ss\"> Riprendi </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-outline-dark button-ss\"> Termina </button>");
 };
 
 function resumeTimer() {
-    $('#controls').html("<button id=\"stop\" onclick=stopTimer() class=\"btn btn-lg btn-info button-ss\"> Pausa </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-lg btn-info button-ss\"> Termina </button>");
+    $('#controls').html("<button id=\"stop\" onclick=stopTimer() class=\"btn btn-outline-dark button-ss\"> Pausa </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-outline-dark button-ss\"> Termina </button>");
     startTimer();
 }
 
@@ -24,7 +23,7 @@ function terminateTimer() {
     $('#hours').html('00 :');
     $('#mins').html('00 :');
     $('#seconds').html('00');
-    $('#controls').html("<button id=\"start\" onclick=start() class=\"btn btn-lg btn-info button-ss\"> Inizia </button>");
+    $('#controls').html("<button id=\"start\" onclick=start() class=\"btn btn-outline-dark button-ss\"> Inizia </button>");
 };
 
 function startTimer(){
