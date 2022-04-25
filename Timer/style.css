@@ -54,10 +54,30 @@ body {
   white-space: nowrap;
 }
 
+.summary {
+  width: 50%;
+  padding: 15px;
+  margin: auto;
+  white-space: nowrap;
+  display: table;
+}
+
+.button-ss {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.checkbox-inline {
+  margin-right: 1rem;
+}
 
 @media screen and (min-width: 601px) {
   .timer {
     font-size: 100px;
+  }
+
+  .checkbox-inline {
+    display: inline-block;
   }
 }
 
@@ -65,9 +85,8 @@ body {
   .timer {
     font-size: 50px;
   }
-}
 
-.button-ss {
-  margin-left: 5px;
-  margin-right: 5px;
+  .checkbox-inline {
+    display: block;
+  }
 }
