@@ -1,30 +1,39 @@
+var hours = 0;
 var mins = 0;
 var seconds = 0;
+var pause = 0;
 var timex;
 
 function start() {
     startTimer();
-    $('#controls').html("<button id=\"stop\" onclick=stopTimer() class=\"btn btn-outline-dark button-ss\"> Pausa </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-outline-dark button-ss\"> Termina </button>");
-};
+    $('#controls').html("<button id=\"stop\" onclick=stopTimer() class=\"btn btn-warning button-ss\"> Pausa </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-warning button-ss\"> Termina </button>");
+}
 
 function stopTimer() {
+    pause++;
     clearTimeout(timex);
-    $('#controls').html("<button id=\"resume\" onclick=resumeTimer() class=\"btn btn-outline-dark button-ss\"> Riprendi </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-outline-dark button-ss\"> Termina </button>");
-};
+    $('#controls').html("<button id=\"resume\" onclick=resumeTimer() class=\"btn btn-warning button-ss\"> Riprendi </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-warning button-ss\"> Termina </button>");
+}
 
 function resumeTimer() {
-    $('#controls').html("<button id=\"stop\" onclick=stopTimer() class=\"btn btn-outline-dark button-ss\"> Pausa </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-outline-dark button-ss\"> Termina </button>");
+    $('#controls').html("<button id=\"stop\" onclick=stopTimer() class=\"btn btn-warning button-ss\"> Pausa </button> <button id=\"terminate\" onclick=terminateTimer() class=\"btn btn-warning button-ss\"> Termina </button>");
     startTimer();
 }
 
 function terminateTimer() {
     clearTimeout(timex);
-    hours = 0;      mins = 0;      seconds = 0;
-    $('#hours').html('00 :');
-    $('#mins').html('00 :');
-    $('#seconds').html('00');
-    $('#controls').html("<button id=\"start\" onclick=start() class=\"btn btn-outline-dark button-ss\"> Inizia </button>");
-};
+    var study_time = ((hours.toString() < 10) ? '0'+hours.toString() : hours.toString()) + ":" +
+                     ((mins.toString() < 10) ? '0'+mins.toString() : mins.toString()) + ":" +
+                     ((seconds.toString() < 10) ? '0'+seconds.toString() : seconds.toString());
+    
+    $.ajax({
+      url: "summary.php",
+      method: "POST",
+      data: {studyTime:study_time, pause:pause},
+    }).done(function(response) {
+      $("#main").html(response);
+    });  
+}
 
 function startTimer(){
   timex = setTimeout(function(){
