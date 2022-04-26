@@ -1,21 +1,22 @@
-<form name="loginForm" action="" class="summary" method="post" onsubmit="remember()">
-    <h2> Studio terminato </h2>
+<form name="loginForm" action="" class="summary" method="post" onsubmit="remember()" style="background-color: white;">
+    <h2 style="font-family:'Times New Roman', Times, serif;"> Complimenti, la tua sessione di studio è terminata! </h2>
+    <p></p>
+    <caption><i>Riepilogo</i></caption>
     <table class="table">
-        <caption> Riepilogo </caption>
         <tbody>
             <tr>
-                <td> Tempo di studio </td>
+                <td> Tempo di studio: </td>
                 <td> <?= $_POST["studyTime"] ?> </td>
             </tr>
             <tr>
-                <td> Pause </td>
+                <td>Numero delle pause:</td>
                 <td> <?= $_POST["pause"] ?> </td>
             </tr>
         </tbody>
     </table> 
-    <label style="font-size: 20px;"> Dai un voto a questa sessione </label> <br>
+    <label> Dai un voto a questa sessione (obbligatorio): </label> <br>
     <div class="form-check checkbox-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="voto1" value="1">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="voto1" value="1" required>
         <label class="form-check-label" for="inlineRadio1"> ★ </label>
     </div>
     <div class="form-check checkbox-inline">
@@ -35,9 +36,10 @@
         <label class="form-check-label" for="inlineRadio3"> ★★★★★ </label>
     </div> <br> <br>
     <div>
-        <label class="form-label" for="comm"> Lascia un commento </label>
+        <label class="form-label" for="comm"> Lascia un commento (opzionale): </label>
         <textarea class="form-control" id="comm" rows="4"> </textarea>
     </div> <br>
     <button type="submit" class="btn btn-warning button-ss" name="submitButton"> Invia </button>
-    <a href="" style="text-decoration: none; float: right;" class="linknav"> Indietro </a>
+    <button type="reset" class="btn btn-warning button-ss" name="resetButton"> Reset </button>
+    <a href="" style="text-decoration:none; float: right;" class="linknav"> Torna indietro </a>
 </form>
