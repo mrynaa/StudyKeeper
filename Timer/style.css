@@ -1,8 +1,7 @@
 body {
   min-height: 100vh;
   background: url("timer.jpg")
-  no-repeat center
-  center fixed;
+  no-repeat center;
   background-size: cover; 
 }
 
