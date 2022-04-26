@@ -1,5 +1,9 @@
 body {
   min-height: 100vh;
+  background: url("timer.jpg")
+  no-repeat center
+  center fixed;
+  background-size: cover; 
 }
 
 .nav-bg {
@@ -7,14 +11,14 @@ body {
 }
 
 .logoS {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Arbutus Slab';
   font-style: inherit;
   font-size: 30px;
   color: black;
 }
 
 .logoK {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Arbutus Slab';
   font-style: inherit;
   font-size: 30px;
   color: rgb(255,208,52);
@@ -27,7 +31,7 @@ body {
 }
 
 .footer-bg {
-  background-color: aquamarine;
+  background-color: gainsboro;
 }
 
 .foo-log {
@@ -52,6 +56,7 @@ body {
   padding: 15px;
   margin: auto;
   white-space: nowrap;
+  color: white;
 }
 
 .summary {
@@ -71,6 +76,7 @@ body {
   margin-right: 1rem;
 }
 
+
 @media screen and (min-width: 601px) {
   .timer {
     font-size: 100px;
@@ -80,6 +86,7 @@ body {
     display: inline-block;
   }
 }
+
 
 @media screen and (max-width: 600px) {
   .timer {
