@@ -1,4 +1,4 @@
-<form name="loginForm" action="" class="summary" method="post" onsubmit="remember()" style="background-color: white;">
+<form name="loginForm" action="" class="summary" method="post" onsubmit="remember()">
     <h2 style="font-family:'Times New Roman', Times, serif;"> Complimenti, la tua sessione di studio è terminata! </h2>
     <p></p>
     <caption><i>Riepilogo</i></caption>
