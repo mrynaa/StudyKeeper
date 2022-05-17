@@ -22,7 +22,7 @@
 
     <input type="hidden" name="studyTime" value="<?= $_POST["studyTime"] ?>">
     <input type="hidden" name="pause" value="<?= $_POST["pause"] ?>">
-    <label style="font-size: 20px;"> Dai un voto a questa sessione </label> <br>
+    <label style="font-size: 20px;"> Dai un voto a questa sessione* </label> <br>
     <div class="form-check checkbox-inline">
         <input class="form-check-input" type="radio" name="valutation" id="voto1" value="1">
         <label class="form-check-label" for="inlineRadio1"> ★ </label>
