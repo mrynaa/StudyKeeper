@@ -69,7 +69,7 @@
     <form class="container_center" action="" method="post">
 		<div class="main-body">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-8 m-auto">
 					<div class="card">
 						<div class="card-body">
                         <h5 class="d-flex align-items-center mb-3">Informazioni personali</h5>
@@ -157,7 +157,7 @@
 				</div>
 			</div>
         </div>
-        <div class="gap-3 d-md-flex justify-content-md-end text-center">
+        <div class="gap-3 d-md-flex justify-content-md-center text-center">
             <button type="submit" id="savebutton" class="btn btn-warning button-ss"> Salva le modifiche</button>
             <p></p>
             <button id="savebutton" class="btn btn-warning button-ss"> Elimina il profilo</button>
