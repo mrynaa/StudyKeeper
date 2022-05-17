@@ -66,6 +66,12 @@ body {
   display: table;
 }
 
+.summary2{
+  min-height: 100vh;
+  display: table;
+  margin: auto;
+}
+
 .comment {
   width: 100%;
   white-space: normal;
