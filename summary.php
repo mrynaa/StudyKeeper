@@ -1,45 +1,92 @@
-<form name="loginForm" action="" class="summary" method="post" onsubmit="remember()">
-    <h2 style="font-family:'Times New Roman', Times, serif;"> Complimenti, la tua sessione di studio è terminata! </h2>
-    <p></p>
-    <caption><i>Riepilogo</i></caption>
-    <table class="table">
-        <tbody>
-            <tr>
-                <td> Tempo di studio: </td>
-                <td> <?= $_POST["studyTime"] ?> </td>
-            </tr>
-            <tr>
-                <td>Numero delle pause:</td>
-                <td> <?= $_POST["pause"] ?> </td>
-            </tr>
-        </tbody>
-    </table> 
-    <label> Dai un voto a questa sessione*: </label> <br>
-    <div class="form-check checkbox-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="voto1" value="1" required>
-        <label class="form-check-label" for="inlineRadio1"> ★ </label>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+            crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+            crossorigin="anonymous">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="main.css">
+        <title>Homepage</title>
+    </head>
+    
+
+<body>
+    <?php 
+        if(!isset($_COOKIE["LoggedUser"])) {
+            header("Location: http://localhost:3000/login.php");
+        } else {
+            $user = $_COOKIE["LoggedUser"];
+        }
+    ?>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+        <div class="container">
+            <span> <a href="index.html" style="text-decoration: none;"> <l1 class="logoS">Study</l1><l2 class="logoK">Keeper</l2> </a> </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link linknav" href="main.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link linknav" href="profilo.php">Profilo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link linknav" href="logout.php">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CENTRO DELLA PAGINA -->
+    <div class="pagina text-center">
+        <div class="row align-items-lg-center">
+            <div class="col-lg-5 offset-xxl-1 col-xxl-3 mb-4 mb-lg-0 text-center text-lg-center">
+                <div class="welcome">
+                    <p></p>
+                    <h1>Ciao, <b> <?php echo $user ?></b>! <h1><h2> Cosa vuoi fare oggi?</h2>
+                </div>
+                <p></p> 
+                <div>
+                    <a href="statistic.php"><button class="btn btn-warning" style="width: 90%;">
+                    Visualizza le tue statistiche 
+                    </button></a>
+                    <p></p>
+                    <a href="timer.php"><button class="btn btn-warning" style="width: 90%;">
+                    Inizia una nuova sessione di studio
+                    </button></a>
+                </div>
+            </div>
+            <div class="col-lg-7 col-xxl-7 position-relative">
+                <img src = "home.png" id= "logo" style = "max-width :60%"/>
+            </div>
+        </div>
     </div>
-    <div class="form-check checkbox-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="voto2" value="2">
-        <label class="form-check-label" for="inlineRadio3"> ★★ </label>
-    </div>
-    <div class="form-check checkbox-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="voto3" value="3">
-        <label class="form-check-label" for="inlineRadio3"> ★★★	 </label>
-    </div>
-    <div class="form-check checkbox-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="voto4" value="4">
-        <label class="form-check-label" for="inlineRadio3"> ★★★★ </label>
-    </div>
-    <div class="form-check checkbox-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="voto5" value="5">
-        <label class="form-check-label" for="inlineRadio3"> ★★★★★ </label>
-    </div> <br> <br>
-    <div>
-        <label class="form-label" for="comm"> Lascia un commento: </label>
-        <textarea class="form-control" id="comm" rows="4"> </textarea>
-    </div> <br>
-    <button type="submit" class="btn btn-warning button-ss" name="submitButton"> Invia </button>
-    <button type="reset" class="btn btn-warning button-ss" name="resetButton"> Reset </button>
-    <a href="" style="text-decoration:none; float: right;" class="linknav"> Torna indietro </a>
-</form>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-lg-start footer-bg text-muted">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <div class="me-5 d-none d-lg-block">
+                <span class="foo-log">Copyright © 2022, All Right Reserved Seobin</span>
+            </div>
+            <div>
+                <a href="https://github.com/mrynaa/StudyKeeper" class="me-4 text-reset" style="text-decoration: none;">
+                <i class="fa fa-github icon"></i>
+                </a>
+            </div>
+        </section>           
+    </footer>
+</body>
+</html>
