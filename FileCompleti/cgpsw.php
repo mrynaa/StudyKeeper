@@ -74,11 +74,11 @@
 				<div class="col-sm-8 m-auto">
 					<div class="card">
 						<div class="card-body">
-							<h5 class="d-flex align-items-center mb-3">Cambia la Password</h5>
+							<h5 class="d-flex align-items-center mb-3">Cambia Password</h5>
 							<p></p>
                             <div class="row mb-3">
 								<div class="col-sm-3">
-									<h6 class="mb-0">Vecchia Password</h6>
+									<h6 class="mb-0">Vecchia Password*</h6>
 								</div>
 								<div class="col-sm-9 text-secondary">
 									<input type="password" name="opsw" class="form-control" value="" required>
@@ -87,7 +87,7 @@
 							</div>
 							<div class="row mb-3">
 								<div class="col-sm-3">
-									<h6 class="mb-0">Nuova Password</h6>
+									<h6 class="mb-0">Nuova Password*</h6>
 								    </div>
 								    <div class="col-sm-9 text-secondary">
 									    <input type="password" name="psw" class="form-control" value="" required>
@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="row mb-3">
 								    <div class="col-sm-3">
-									    <h6 class="mb-0">Conferma Password</h6>
+									    <h6 class="mb-0">Conferma Password*</h6>
 								    </div>
 								    <div class="col-sm-9 text-secondary">
 									    <input type="password" name="cpsw" class="form-control" value="" required>
