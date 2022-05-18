@@ -78,7 +78,7 @@
                             <h5 class="d-flex align-items-center mb-3">Informazioni personali</h5>
                             <div class="row mb-3">
                                 <div class="col-sm-3">
-									<h6 class="mb-0">Username</h6>
+									<h6 class="mb-0">Username*</h6>
 								</div>
 								<div id="d_user" class="col-sm-9 text-secondary">
                                     <h5> <?= $_SESSION["userSession"] ?> </h5>
@@ -86,7 +86,7 @@
 							</div>
 							<div class="row mb-3">
                                 <div class="col-sm-3">
-									<h6 class="mb-0">Email</h6>
+									<h6 class="mb-0">Email*</h6>
 								</div>
 								<div id="d_email" class="col-sm-9 text-secondary">
                                     <h5> <?= $email ?> </h5>
@@ -94,7 +94,7 @@
 							</div>
 							<div class="row mb-3">
 								<div class="col-sm-3">
-									<h6 class="mb-0">Iscrizione</h6>
+									<h6 class="mb-0">Iscrizione*</h6>
 								</div>
 								<div id="d_iscr" class="col-sm-9 text-secondary">
                                     <h5> <?= $iscrizione ?> </h5>
