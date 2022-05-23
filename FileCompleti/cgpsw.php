@@ -71,7 +71,7 @@
     <form id="pswform" class="container_center" action="pswsave.php" method="post">
 	    <div class="main-body">
 			<div class="row">
-				<div class="col-sm-8 m-auto">
+				<div class="col-sm-8 m-auto mt-5">
 					<div class="card">
 						<div class="card-body">
 							<h5 class="d-flex align-items-center mb-3">Cambia Password</h5>
