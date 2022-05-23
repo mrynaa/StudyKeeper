@@ -17,7 +17,7 @@
             header("Location: http://localhost:3000/registrazione.php");
         } else {
             $psw = $_POST["password"];
-            $query = 'INSERT into utente values $1,$2,$3,CURRENT_DATE,DEFAULT)';
+            $query = 'INSERT into utente values $1,$2,$3,CURRENT_DATE)';
             $result = pg_query_params($dbconn, $query, array($user, $email, $psw));
             if($result) {
                 $_SESSION["succ_reg"] = "";
