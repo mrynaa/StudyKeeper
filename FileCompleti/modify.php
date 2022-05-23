@@ -55,6 +55,6 @@
     header("Location: http://localhost:3000/profilo.php");
 
     } else {
-        echo "ERRORE 404: Pagina non trovata";
+        header("Location: http://localhost:3000/profilo.php");
     }
 ?>
