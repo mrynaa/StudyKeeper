@@ -6,7 +6,7 @@
 
 <div class="main-body">
 	<div class="row">
-		<div class="col-sm-8 m-auto">
+		<div class="col-sm-5 m-auto mt-5">
 			<div class="card">
 				<div class="card-body">
 					<h5 class="d-flex align-items-center mb-3">Stai per cancellare il tuo profilo, tutti i tuoi dati e le tue sessioni di studio verrano rimosse dal sito, desideri continuare?</h5>
