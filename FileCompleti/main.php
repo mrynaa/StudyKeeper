@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="col-lg-7">
-                <img src = "home.png" id= "logo" style = "max-width :70%"/>
+                <img src = "home.png" id= "logo" style = "max-width: 60%"/>
             </div>
         </div>
     </div>
