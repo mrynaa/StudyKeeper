@@ -52,9 +52,9 @@
     </nav>
 
     <!-- CENTRO DELLA PAGINA -->
-    <div class="pagina text-center">
+    <div class="container2 text-center">
         <div class="row align-items-lg-center">
-            <div class="col-lg-5 offset-xxl-1 col-xxl-3 mb-4 mb-lg-0 text-center text-lg-center">
+            <div class="col-lg-5 text-center text-lg-center">
                 <div class="welcome">
                     <p></p>
                     <h1>Ciao, <b> <?php echo $user ?></b>! <h1><h2> Cosa vuoi fare oggi?</h2>
@@ -70,8 +70,8 @@
                     </button></a>
                 </div>
             </div>
-            <div class="col-lg-7 col-xxl-7 position-relative">
-                <img src = "home.png" id= "logo" style = "max-width :60%"/>
+            <div class="col-lg-7">
+                <img src = "home.png" id= "logo" style = "max-width :70%"/>
             </div>
         </div>
     </div>
