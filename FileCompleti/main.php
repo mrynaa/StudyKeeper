@@ -59,9 +59,8 @@
 
     <!-- CENTRO DELLA PAGINA -->
     <div class="pagina text-center">
-        
-        <div class="rowmain align-items-lg-center"> 
-            <div class="col-lg-5 offset-xxl-1 col-xxl-3 mb-4 mb-lg-0 text-center text-lg-center"> 
+        <div class="rowmain align-items-center"> 
+            <div class="col-lg-5 col-sm-4 mb-4 text-center text-lg-center"> 
                 <div class="welcome"> 
                     <p></p>
                     <h1>Ciao, <b> <?= $_SESSION["userSession"] ?></b>! <h1><h2> Cosa vuoi fare oggi?</h2>
@@ -78,7 +77,7 @@
                 </div> 
             </div>
             
-           <div class="col-lg-7 col-xxl-7 position-relative">
+           <div class="col-lg-7 col-sm-8">
                  <img src = "home.png" id= "logo" style = "max-width :60%"/> 
             </div> 
         </div> 
