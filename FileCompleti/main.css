@@ -1,0 +1,63 @@
+body{
+  background: #f9f9fa;
+}
+
+.pagina{
+  min-height: 100vh;
+  margin-top: 10em;
+}
+
+.welcome{
+    font-family: "Times New Roman, Times, serif";
+    color: black;
+    font-size: 100%;
+}
+
+.rowmain {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    /* margin-right: calc(-.5 * var(--bs-gutter-x)); */
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.nav-bg {
+    background-color:rgb(82,113,255);
+  }
+  
+.logoS {
+    font-family: 'Arbutus Slab';
+    font-style: inherit;
+    font-size: 30px;
+    color: black;
+}
+  
+.logoK {
+    font-family: 'Arbutus Slab';
+    font-style: inherit;
+    font-size: 30px;
+    color: rgb(255,208,52);
+}
+  
+.linknav {
+    font-size:20px;
+    font-family:serif !important;
+    color: black !important;
+}
+  
+  
+.footer-bg {
+      background-color:gainsboro;
+}
+
+.foo-log {
+    font-size: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(58, 56, 56);
+}
+  
+.icon {
+    font-size: 30px !important;
+}
