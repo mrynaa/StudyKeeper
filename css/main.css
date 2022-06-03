@@ -16,7 +16,8 @@ body{
 .rowmain {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 4em;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
 .nav-bg {
