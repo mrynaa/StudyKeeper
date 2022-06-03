@@ -30,7 +30,16 @@
 </head>
 
 <body>
-    <?php 
+    <?php
+	if(isset($_SESSION["user_error"])) {
+            echo "<script> alert(\"Username già presente nel sistema\"); </script>";
+            unset($_SESSION["user_error"]);
+        } 
+        if(isset($_SESSION["email_error"])) {
+            echo "<script> alert(\"Email già presente nel sistema\"); </script>";
+            unset($_SESSION["email_error"]);
+        }
+	
         $dbconn = pg_connect("host=localhost dbname=StudyKeeper password=superuser user=postgres port=5432")
                 or die(pg_last_error());
         $strSQL = "SELECT * FROM utente WHERE username= '".$_SESSION["userSession"]."'";
